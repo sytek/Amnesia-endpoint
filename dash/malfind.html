@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Amnesia - Intel Memory Analyzer</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Amnesia Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Dashboard Home</a>
+                </li>
+                <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#procs"> Processes </a>
+                        <ul id="procs" class="collapse">
+                            <li>
+                                <a href="pslist.html">List</a>
+                            </li>
+                            <li>
+                                <a href="psscan.html">Scanned</a>
+                            </li>
+                            <li>
+                                <a href="pstree.html">Tree View</a>
+                            </li>
+                            <li>
+                                <a href="hidden.html">Hidden</a>
+                            </li>
+                        </ul>
+                </li>
+                <li>
+                    <a href="network.html">Network Connections</a>
+                </li>
+                <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#mal"> Malware </a>
+                        <ul id="mal" class="collapse">
+                            <li>
+                                <a href="malfind.html">Injected Code</a>
+                            </li>
+                            <li>
+                                <a href="malsysproc.html">Abnormal Processes</a>
+                            </li>
+                            <li>
+                                <a href="unlinked_dll.html">Unlinked DLLs</a>
+                            </li>
+                        </ul>
+                </li>
+                <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#rootkit"> Rootkit </a>
+                        <ul id="rootkit" class="collapse">
+                            <li>
+                                <a href="hooking.html">Kernel Hooking</a>
+                            </li>
+                            <li>
+                                <a href="maldrivers.html">Suspicious Drivers</a>
+                            </li>
+                        </ul>
+                </li>
+                <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#cmd"> Console </a>
+                        <ul id="cmd" class="collapse">
+                            <li>
+                                <a href="console.html">I/O Information</a>
+                            </li>
+                            <li>
+                                <a href="cmd.html">Command Shell Inputs</a>
+                            </li>
+                        </ul>
+                </li>
+                <li>
+                    <a href="#">Knowledge Base</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Malware Injected Code</h1>
+                        <embed src='../raw/malfind.txt' width='1100' height='750'>
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>
